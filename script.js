@@ -12,5 +12,4 @@ for (i = 0; i < 16; i++) {
     
     container.appendChild(row);
     
-    
 }
