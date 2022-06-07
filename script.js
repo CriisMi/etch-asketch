@@ -1,6 +1,7 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('.button');
 
+//create a grid
 function defineGrid (size) {
 
     //delete the old grid;
@@ -20,7 +21,6 @@ function defineGrid (size) {
             const cell = document.createElement('div');
             cell.className = 'cell';
             row.appendChild(cell);
-            cell.innerText = (i + 1);
             cell.setAttribute('style', `height:${700/size}px; width: ${700/size}px;`);
 
             //add hover efect 
@@ -35,8 +35,10 @@ function defineGrid (size) {
     }
 }
 
+//initial 16x16 grid on screen
 defineGrid(16);
 
+//ask for user imput to reset grid
 function resetGrid () {
     let size;
     do {
@@ -46,4 +48,5 @@ function resetGrid () {
     defineGrid(size);
 }
 
-let num = btn.addEventListener('click', resetGrid);
+
+btn.addEventListener('click', resetGrid);
