@@ -38,7 +38,11 @@ function defineGrid (size) {
 defineGrid(16);
 
 function resetGrid () {
-    let size = prompt("Define the size of your canvas (must be smaller than 100)");
+    let size;
+    do {
+        size = prompt("Define the size of your canvas (must be smaller than 100)");
+    } while (size < 1 || size > 100 || isNaN(size));
+    
     defineGrid(size);
 }
 
