@@ -1,4 +1,13 @@
 const container = document.querySelector('.container');
+const btn = document.querySelector('.button');
+
+
+function askValue () {
+    prompt("Define the size of your canvas (must be smaller than 100)");
+}
+
+let num = btn.addEventListener('click', askValue);
+
 
 for (i = 0; i < 16; i++) {
 
@@ -12,6 +21,7 @@ for (i = 0; i < 16; i++) {
         cell.className = 'cell';
         row.appendChild(cell);
         cell.innerText = (i + 1);
+        cell.setAttribute('style', `height:${700/16}px; width: ${700/16}px;`);
 
         //add hover efect 
         cell.addEventListener('mouseover', () => {
