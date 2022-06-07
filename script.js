@@ -28,8 +28,14 @@ function defineGrid (size) {
                 cell.className += ' hover';
             });
             cell.addEventListener('mouseout', () => {
-                cell.className = 'cell';
+                cell.classList.remove('hover');
             });
+
+            //draw on mouse click
+            cell.addEventListener('click', () => {
+                cell.className += ' draw';
+            });
+
         }
         container.appendChild(row);
     }
